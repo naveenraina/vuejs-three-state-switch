@@ -1,17 +1,6 @@
-# vuejs-toggle-switch
+# vuejs-three-state-switch
 Toggle switch for vue.js <br>
 v1.3.0
-
-<img src="https://img.shields.io/badge/license-MIT-green.svg" /> <img src="https://img.shields.io/badge/dependencies-0-brightgreen.svg" /> <img src="https://img.shields.io/badge/bugs-0-red.svg" />
-
-[Live demo](http://softwarefun.no/#/toggleswitch) 
-<br>
-
-<img src="http://softwarefun.no/demo_toggle_switch.png" height="300">
-
-Do you have questions or want a new feature? Use the "Issues" section :point_left:
-
-NB! Version 1.2.32 now use rem instead of px
 
 ## Setup
 install:
