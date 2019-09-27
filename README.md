@@ -18,8 +18,8 @@ Use: (in your local .vue file/component, html section)
 
 ```xml
 Simple:
-<toggle-switch group="a" :options="myOptions" @change="log($event.value)" v-model="switch1Value"/>
-
+<toggle-switch group="a" :options="myOptions" @change="log($event.value)" v-model="value1"/>
+<toggle-switch group="b" :options="myOptions" @change="log($event.value)" v-model="value2"/>
 <!-- Options struct: -->
 myOptions: {
     items: {
