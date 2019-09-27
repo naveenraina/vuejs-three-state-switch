@@ -16,12 +16,12 @@ NB! Version 1.2.32 now use rem instead of px
 ## Setup
 install:
 ```bash
-npm install vuejs-toggle-switch --save
+npm install vuejs-three-state-switch --save
 ```
 
 Import: (in your main.js)
 ```javascript
-import ToggleSwitch from 'vuejs-toggle-switch'
+import ToggleSwitch from 'vuejs-three-state-switch'
 Vue.use(ToggleSwitch)
 ```
 ## Usage
