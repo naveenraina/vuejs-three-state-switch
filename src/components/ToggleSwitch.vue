@@ -5,38 +5,32 @@
       :class="{'square' : defaultOptions.layout.squareCorners}"
       :style="toggleSwitchStyle"
     >
-      <li
+        <li
         :style="itemStyle"
         v-for="(label, index) in defaultOptions.items.labels"
-        :key="index"
-      >
-        <input
-          :disabled="defaultOptions.items.disabled || disabled"
-          :id="label.name + group" :value="label.name"
-          :name="name"
-          type="radio"
-          v-on:click="toggle"
-        >
-        <label
-          v-if="label.name === selectedItem"
-          :style="labelStyleSelected(label.color, label.backgroundColor)"
-          :class="{ active: !defaultOptions.items.disabled || disabled}"
-          class="selected"
-          :for="label.name + group"
-          type="radio"
-        >
-          {{ label.name }}
-        </label>
-        <label
-          v-else
-          :style="labelStyle"
-          :class="{active: !defaultOptions.items.disabled || disabled}"
-          :for="label.name + group"
-          type="radio"
-        >
-          {{ label.name }}
-        </label>
-      </li>
+        :key="index">
+            <input
+            :disabled="defaultOptions.items.disabled || disabled"
+            :id="label.name + group" :value="label.name"
+            :name="name"
+            type="radio"
+            v-on:click="toggle">
+            <label
+                v-if="label.name === selectedItem"
+                :style="labelStyleSelected(label.color, label.backgroundColor)"
+                :class="{ active: !defaultOptions.items.disabled || disabled}"
+                class="selected"
+                :for="label.name + group"
+                type="radio">
+            </label>
+            <label
+            v-else
+            :style="labelStyle"
+            :class="{active: !defaultOptions.items.disabled || disabled}"
+            :for="label.name + group"
+            type="radio">
+            </label>
+        </li>
     </ul>
   </div>
 </template>
@@ -75,7 +69,7 @@ export default {
     this.defaultOptions = {
       layout: {
         color: 'black',
-        backgroundColor: 'lightgray',
+        backgroundColor: 'white',
         selectedColor: 'white',
         selectedBackgroundColor: 'green',
         borderColor: 'gray',
@@ -89,14 +83,15 @@ export default {
         fontSize: 1.5,
         height: 3.25,
         padding: 0.5,
-        width: 10
+        width: 20
       },
       items: {
         delay: 0.4,
-        preSelected: 'unknown',
+        preSelected: 'neutral',
         disabled: false,
         labels: [
           { name: 'Off', color: 'white', backgroundColor: 'red' },
+          { name: 'unknown', color: 'white', backgroundColor: 'grey' },
           { name: 'On', color: 'white', backgroundColor: 'green' }
         ]
       }
@@ -227,6 +222,10 @@ label {
   position:relative;
 }
 
+.toggle-switch li label{
+  border-right-color: white !important;
+}
+
 .toggle-switch li:first-child label {
   border: 1px solid;
   border-top-left-radius: 5px;
@@ -239,6 +238,7 @@ label {
   border-bottom: 1px solid;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  border-right-color: gray !important;
 }
 
 .toggle-switch label, .toggle-switch input {
