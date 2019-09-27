@@ -17,20 +17,8 @@ Vue.use(ToggleSwitch)
 Use: (in your local .vue file/component, html section)
 
 ```xml
-simple:
+Simple:
 <toggle-switch group="a" :options="myOptions" @change="log($event.value)" v-model="switch1Value"/>
-
-Detailed:
-<toggle-switch
-  :options="myOptions"
-  :disabled="false" // optional, can use here on top level or in items section
-  @change="updateMap($event.value)" // This is optional
-  @selected="selectedMethod()" // This is optional
-  v-model="selectedMapOption" // This is optional 2-way binding (try not to use both 1-way and 2-way)
-  :value="selectedMapOption" // This is optional 1-way binding (try not to use both 1-way and 2-way)
-  :name="name" // This is optional for input block
-  :group="switchGroup" // This is optional, use if multiple toggle-switch on same page with same label names
-  /> 
 
 <!-- Options struct: -->
 myOptions: {
@@ -44,7 +32,17 @@ myOptions: {
     }
 }
 
-OR
+Detailed:
+<toggle-switch
+  :options="myOptions"
+  :disabled="false" // optional, can use here on top level or in items section
+  @change="updateMap($event.value)" // This is optional
+  @selected="selectedMethod()" // This is optional
+  v-model="selectedMapOption" // This is optional 2-way binding (try not to use both 1-way and 2-way)
+  :value="selectedMapOption" // This is optional 1-way binding (try not to use both 1-way and 2-way)
+  :name="name" // This is optional for input block
+  :group="switchGroup" // This is optional, use if multiple toggle-switch on same page with same label names
+  /> 
 
 myOptions: {
   layout: {
