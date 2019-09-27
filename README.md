@@ -17,7 +17,10 @@ Vue.use(ToggleSwitch)
 Use: (in your local .vue file/component, html section)
 
 ```xml
+simple:
+<toggle-switch group="a" :options="myOptions" @change="log($event.value)" v-model="switch1Value"/>
 
+Detailed:
 <toggle-switch
   :options="myOptions"
   :disabled="false" // optional, can use here on top level or in items section
@@ -30,6 +33,19 @@ Use: (in your local .vue file/component, html section)
   /> 
 
 <!-- Options struct: -->
+myOptions: {
+    items: {
+        preSelected: 'unknown',
+        labels: [
+        { name: 'Off', color: 'white', backgroundColor: 'red' },
+        { name: 'unknown', color: 'white', backgroundColor: 'grey' },
+        { name: 'On', color: 'white', backgroundColor: 'green' }
+        ]
+    }
+}
+
+OR
+
 myOptions: {
   layout: {
     color: 'black',
