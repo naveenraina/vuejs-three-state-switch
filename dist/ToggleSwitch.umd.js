@@ -1,5 +1,14 @@
-module.exports =
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("vue"));
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["ToggleSwitch"] = factory(require("vue"));
+	else
+		root["ToggleSwitch"] = factory(root["Vue"]);
+})((typeof self !== 'undefined' ? self : this), function(__WEBPACK_EXTERNAL_MODULE__8bbf__) {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -2010,7 +2019,7 @@ exports.f = __webpack_require__("9e1e") ? Object.defineProperty : function defin
 /***/ "8bbf":
 /***/ (function(module, exports) {
 
-module.exports = require("vue");
+module.exports = __WEBPACK_EXTERNAL_MODULE__8bbf__;
 
 /***/ }),
 
@@ -2816,7 +2825,7 @@ if (typeof window !== 'undefined') {
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
 var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3dd0491b-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ToggleSwitch.vue?vue&type=template&id=4ce2107b&scoped=true&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"087e954d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ToggleSwitch.vue?vue&type=template&id=4ce2107b&scoped=true&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('ul',{staticClass:"toggle-switch",class:{'square' : _vm.defaultOptions.layout.squareCorners},style:(_vm.toggleSwitchStyle)},_vm._l((_vm.defaultOptions.items.labels),function(label,index){return _c('li',{key:index,style:(_vm.itemStyle)},[_c('input',{attrs:{"disabled":_vm.defaultOptions.items.disabled || _vm.disabled,"id":label.name + _vm.group,"name":_vm.name,"type":"radio"},domProps:{"value":label.name},on:{"click":_vm.toggle}}),(label.name === _vm.selectedItem)?_c('label',{staticClass:"selected",class:{ active: !_vm.defaultOptions.items.disabled || _vm.disabled},style:(_vm.labelStyleSelected(label.color, label.backgroundColor)),attrs:{"for":label.name + _vm.group,"type":"radio"}}):_c('label',{class:{active: !_vm.defaultOptions.items.disabled || _vm.disabled},style:(_vm.labelStyle),attrs:{"for":label.name + _vm.group,"type":"radio"}})])}),0)])}
 var staticRenderFns = []
 
@@ -3203,4 +3212,5 @@ external_commonjs_vue_commonjs2_vue_root_Vue_default.a.component('ToggleSwitch',
 /***/ })
 
 /******/ });
-//# sourceMappingURL=ThreeStateSwitch.common.js.map
+});
+//# sourceMappingURL=ToggleSwitch.umd.js.map
