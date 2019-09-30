@@ -21,7 +21,8 @@
                 :class="{ active: !defaultOptions.items.disabled || disabled}"
                 class="selected"
                 :for="label.name + group"
-                type="radio">
+                type="radio"
+                >{{label.name}}
             </label>
             <label
             v-else
@@ -75,7 +76,7 @@ export default {
         borderColor: 'gray',
         fontFamily: 'Arial',
         fontWeight: 'normal',
-        fontWeightSelected: 'bold',
+        fontWeightSelected: 'normal',
         squareCorners: false,
         noBorder: false
       },
